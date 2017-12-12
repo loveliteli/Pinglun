@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+android:orientation="vertical"
+    tools:context="com.exbawei.liteli.pinglun.MainActivity">
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:orientation="horizontal"
+      android:id="@+id/rl">
+      <ImageView
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:id="@+id/ivfan"
+          android:background="@drawable/raw_1500363027"/>
+
+      <Button
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="发送"
+          android:id="@+id/button2"
+          android:layout_alignParentTop="true"
+          android:layout_alignParentRight="true"
+          android:layout_alignParentEnd="true" />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="朋友圈"
+          android:textSize="20sp"
+          android:layout_alignBaseline="@+id/button2"
+          android:layout_alignBottom="@+id/button2"
+          android:layout_centerHorizontal="true"
+          android:id="@+id/textView" />
+  </RelativeLayout>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/et"
+        android:layout_below="@id/rl"
+        android:hint="这一刻的想法。。。。。"
+        android:gravity="top"
+        android:maxLength="200"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv"
+        android:text="222"
+        android:layout_below="@id/et"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_below="@id/tv">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         >
+                <com.exbawei.liteli.pinglun.MyGridView
+                    android:id="@+id/gridView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="111"
+                    android:columnWidth="90dp"
+                    android:gravity="center"
+                    android:horizontalSpacing="5dp"
+                    android:numColumns="4"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="5dp" />
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="所在位置"
+            android:id="@+id/wei"
+           />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="谁可以看"
+            android:id="@+id/shei"
+            android:layout_below="@+id/wei"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            />
+    </RelativeLayout>
+</LinearLayout>
+
+
+
+</RelativeLayout>
